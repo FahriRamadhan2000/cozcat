@@ -1,8 +1,8 @@
 <?php
 
 namespace Database\Seeders;
-use App\Models\User_admin;
 use Illuminate\Database\Seeder;
+use App\Models\User_admin;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,8 +14,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User_admin::create([
+            'name' => 'Anisa',
+            'username' => 'anisa123',
             'email' => 'anisa@gmail.com',
-            'password' => '123456789'
+            'password' => bcrypt('123456789')
         ]);
     }
 }

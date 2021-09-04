@@ -12,15 +12,7 @@
 						</thead>
 					</table>
 					<div class="bg"style="background-color: #EEE;">
-						<div class="row p-3">
-							<table class="table table-borderless border-bottom border-dark">
-							  <thead>
-							    <tr>
-							      <th colspan="2"><img src="" width="40px">{{ auth()->user()->username }}</th>
-							    </tr>
-							  </thead>
-							</table>
-							  
+						<div class="row p-3">							  
 							  <div class="media-body">
 								  @foreach ($posts as $post)
 								  @if ($post->user->id == Auth::user()->id)
