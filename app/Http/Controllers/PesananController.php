@@ -39,13 +39,7 @@ class PesananController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function batal()
-    {
-        $pesanans = Pesanan::all();
-        return view('pesanan.index', compact('pesanans'), [
-            "title" => "Pemesanan"
-        ]);
-    }
+    
 
     public function pesan()
     {
@@ -61,16 +55,8 @@ class PesananController extends Controller
     {
         $users = User::all();
         $posts = Post::with('user')->get();
-        $pesanans = Pesanan::with('post')->get();
-        return view('pesanan_saya.pesanansya', compact('posts', 'pesanans'), [
-            "title" => "Pesanan"
-        ]);
-    }
-
-    public function batalkan()
-    {
         $pesanans = Pesanan::all();
-        return view('pesan_saya.batalkan', compact('pesanans'), [
+        return view('pesanan_saya.pesanansya', compact('posts', 'pesanans'), [
             "title" => "Pesanan"
         ]);
     }

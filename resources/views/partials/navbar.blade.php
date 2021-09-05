@@ -1,7 +1,5 @@
 <nav class="navbar navbar-light" style="background-color: #FFD748;">
-  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-  </button>
+  
   <div class="container">
     <a class="navbar-brand" href="/dashboard">
       <img src="img/logo3.png" alt="cozcat" width="120">
@@ -14,6 +12,8 @@
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
       <li><a class="dropdown-item" href="/akun">Kelola Akun</a></li>
+      <hr class="dropdown-divider">
+      <li><a class="dropdown-item" href="/toko">Toko Saya</a></li>
       <hr class="dropdown-divider">
       <li><a class="dropdown-item" href="/pesanan_saya">Pesanan Saya</a></li>
       <hr class="dropdown-divider">

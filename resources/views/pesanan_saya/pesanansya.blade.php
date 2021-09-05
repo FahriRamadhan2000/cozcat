@@ -11,8 +11,26 @@
 						  </tr>
 						</thead>
 					</table>
-					<div class="bg"style="background-color: #EEE;">
-						<div class="row p-3">							  
+						<div class="row">
+							
+							<div class="col-sm-12 col-md-6 col-lg-4 mt-4">
+								<div class="card" style="width: 18rem; background-color: #EEE;">
+									{{-- <img class="card-img-top" src="{{ Storage::url }}" alt="Card image cap"> --}}
+									<div class="card-body">
+
+										@foreach ($pesanans as $pesanan)
+										@if ($pesanan->user->id == Auth::user()->id)
+										<p class="card-text">{{ $pesanan->nama_owner }}</p>
+										<p class="card-text">{{ $pesanan->nama_kucing }}</p>
+										<p class="card-text">{{ $pesanan->alamat }}</p>
+										<p class="card-text">{{ $pesanan->menginap }}</p>
+										@endif
+										@endforeach
+									</div>
+								</div>
+							</div>
+						</div>
+						{{-- <div class="row p-3">							  
 							  <div class="media-body">
 								  @foreach ($posts as $post)
 								  @if ($post->user->id == Auth::user()->id)
@@ -27,7 +45,7 @@
 								@endif
 								@endforeach
 							  </div>
-							</div>
+							</div> --}}
 						</div>
 					</div>
 				</div>

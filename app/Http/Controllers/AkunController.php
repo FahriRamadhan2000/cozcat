@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Akun;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Storage;
 
 class AkunController extends Controller
@@ -14,10 +15,10 @@ class AkunController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function users()
-    {
-        return $this->belongsTo(User::class);
-    }
+    // public function users()
+    // {
+    //     return $this->belongsTo(User::class);
+    // }
     
     public function index()
     {

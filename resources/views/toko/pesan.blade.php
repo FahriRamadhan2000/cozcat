@@ -3,7 +3,7 @@
 @section('login')
 
 
-<!doctype html>
+{{-- <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -143,7 +143,7 @@
       </div>
     </nav>
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"> --}}
 		<div class="cont mx-auto" style="width: 900px;">
 			<div class="col-6">
 				<table class="table" style="text-align: center;">
@@ -156,30 +156,35 @@
 					</table>
 				
 
-			<div class="media-body">
-								  @foreach ($posts as $post)
-								  @if ($post->user->id == Auth::user()->id)
-								  <img class="mr-3" src="{{ Storage::url($post->image) }}" alt="Generic placeholder image" width="150">
-							    <h5 class="mt-0">{{ $post->title }}</h5>
-								@endif
-								@endforeach
-								 @foreach ($pesanans as $pesanan)
-								 @if ($pesanan->user->id == Auth::user()->id)
-							    <p>{{ $pesanan->nama_owner }} <br>{{ $pesanan->nama_kucing }} <br>{{ $pesanan->alamat }} <br>{{ $pesanan->menginap }}</p>
-							    <h5>{{ $pesanan->harga }}</h5>
-								@endif
-								@endforeach
-							  </div>
+			<div class="row">
+							
+							<div class="col-sm-12 col-md-6 col-lg-4 mt-4">
+								<div class="card" style="width: 18rem; background-color: #EEE;">
+									{{-- <img class="card-img-top" src="{{ Storage::url }}" alt="Card image cap"> --}}
+									<div class="card-body">
+
+										@foreach ($pesanans as $pesanan)
+										@if ($pesanan->user->id == Auth::user()->id)
+										<p class="card-text">{{ $pesanan->nama_owner }}</p>
+										<p class="card-text">{{ $pesanan->nama_kucing }}</p>
+										<p class="card-text">{{ $pesanan->alamat }}</p>
+										<p class="card-text">{{ $pesanan->menginap }}</p>
+										@endif
+										@endforeach
+									</div>
+								</div>
+							</div>
+						</div>
 
 							  </div>
 			</div>
-	</main>
+	{{-- </main>
       
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
       <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
-
+ --}}
 
   
 @endsection

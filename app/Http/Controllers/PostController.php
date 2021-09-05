@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\Storage;
 use App\Http\Resources\PostResource;
+use Illuminate\Foundation\Auth\User;
+use Illuminate\Support\Facades\Storage;
 
 
 class PostController extends Controller
