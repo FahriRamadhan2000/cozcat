@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Akun;
+use App\Models\akun;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Auth\User;
@@ -22,7 +22,7 @@ class AkunController extends Controller
     
     public function index()
     {
-        $akuns = Akun::with('user')->get();
+        $akuns = akun::with('user')->get();
         return view('akun.index', compact('akuns'), [
             "title" => "Profil Akun"
         ]);
@@ -35,7 +35,7 @@ class AkunController extends Controller
      */
     public function create()
     {
-        $akuns = Akun::all();
+        $akuns = akun::all();
         return view('akun.input_akun', compact('akuns'), [
             "title" => "Input Akun",
             
@@ -64,7 +64,7 @@ class AkunController extends Controller
     $image = $request->file('image');
     $image->storeAs('public/produk', $image->hashName());
 
-    Akun::create($validatedData);
+ akun::create($validatedData);
 
      $request->session()->flash('success', 'Profil Berhasil.');
         return redirect('/akun');
