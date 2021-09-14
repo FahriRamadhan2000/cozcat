@@ -160,7 +160,7 @@
 							
 							<div class="col-sm-12 col-md-6 col-lg-4 mt-4">
 								<div class="card" style="width: 18rem; background-color: #EEE;">
-									{{-- <img class="card-img-top" src="{{ Storage::url }}" alt="Card image cap"> --}}
+									{{-- <img class="card-img-top" src="{{ url('/produk/image'.rand(1,7).'jpeg') }}" alt="Card image cap"> --}}
 									<div class="card-body">
 
 										@foreach ($pesanans as $pesanan)

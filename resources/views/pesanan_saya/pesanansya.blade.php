@@ -15,7 +15,7 @@
 							
 							<div class="col-sm-12 col-md-6 col-lg-4 mt-4">
 								<div class="card" style="width: 18rem; background-color: #EEE;">
-									{{-- <img class="card-img-top" src="{{ Storage::url }}" alt="Card image cap"> --}}
+									{{-- <img class="card-img-top" src="{{ url('/produk/image'.rand(1,7).'jpeg') }}" alt="Card image cap"> --}}
 									<div class="card-body">
 
 										@foreach ($pesanans as $pesanan)
@@ -34,7 +34,7 @@
 							  <div class="media-body">
 								  @foreach ($posts as $post)
 								  @if ($post->user->id == Auth::user()->id)
-								  <img class="mr-3" src="{{ Storage::url($post->image) }}" alt="Generic placeholder image" width="150">
+								  <img class="mr-3" src="{{ url('/produk/image'.rand(1,7).'jpeg') }}" alt="Generic placeholder image" width="150">
 							    <h5 class="mt-0">{{ $post->title }}</h5>
 								@endif
 								@endforeach
