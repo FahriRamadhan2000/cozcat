@@ -178,7 +178,7 @@ a{
   <tbody>
     <tr>
       <th scope="row">{{ $post->id }}</th>
-      <td>{{ url('/produk/image'.rand(1,7).'jpeg') }}</td>
+      <td>{{ url('/produk/image'.rand(1,7).'.jpeg') }}</td>
       <td>{{ $post->title }}</td>
       <td>{{ $post->harga }}</td>
       <td>{{ $post->deskripsi }}</td>

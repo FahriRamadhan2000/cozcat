@@ -14,7 +14,7 @@
 		
 			<div class="row p-5">
 				<div class="media">
-					<img class="mr-3" src="{{ url('/produk/image'.rand(1,7).'jpeg') }}" alt="Generic placeholder image" style="width: 250px">
+					<img class="mr-3" src="{{ url('/produk/image'.rand(1,7).'.jpeg') }}" alt="Generic placeholder image" style="width: 250px">
 					<div class="media-body">
 						<h5 class="mt-0">{{ $post->title }}</h5>
 						<p>{{ $post->harga }}</p>

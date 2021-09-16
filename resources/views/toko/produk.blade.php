@@ -174,7 +174,7 @@
         @if ($post->user->id == Auth::user()->id)
            <div class="col-sm-12 col-md-6 col-lg-4 mt-4">
           <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="{{ url('/produk/image'.rand(1,7).'jpeg') }}" alt="Card image cap">
+            <img class="card-img-top" src="{{ url('/produk/image'.rand(1,7).'.jpeg') }}" alt="Card image cap">
             <div class="card-body">
               <h6 class="card-subtitle mb-2 text-muted">{{ $post->title }}</h6>
               <p class="card-text">{{ $post->harga }}</p>
